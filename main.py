@@ -1,5 +1,4 @@
-from marketingfirm import Marketing_firm
-from marketingfirmcreator import Marketing_firm_creator
+from simulation import Simulation
 
 if __name__ == '__main__':
 

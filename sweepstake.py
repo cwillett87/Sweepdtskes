@@ -1,4 +1,5 @@
 from contestant import Contestant
+import random
 
 class Sweepstake:
 
@@ -14,7 +15,7 @@ class Sweepstake:
         pass
 
     def pick_winner(self):
-        #call notify winner method from Contestant class
+        #randomly pick winner and return contestant
         pass
 
     def print_contestant_info(self, contestant):
