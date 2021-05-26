@@ -1,3 +1,7 @@
+from sweepstake import Sweepstake
+from sweepstakestackmanager import Sweepstake_stack_manager
+from sweepstakesqueuemanager import Sweepstakes_queue_manager
+
 class Marketing_firm:
 
     def __init__(self):
