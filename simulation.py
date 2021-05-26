@@ -1,6 +1,5 @@
 import user_interface
 from marketingfirm import Marketing_firm
-from marketingfirmcreator import Marketing_firm_creator
 
 
 class Simulation:
@@ -14,8 +13,8 @@ class Simulation:
             user_option = user_interface.simulation_main_menu()
             if user_option == 1: #if yes please name the marketing firm
                 firm_name = input(user_interface.name_firm())
-                name = Marketing_firm_creator(firm_name)#create firm with name input
-                name.choose_manager_type()
+                firm = Marketing_firm(firm_name)#create firm with name input
+                firm.create_sweepstakes()
             elif user_option == 2:
                 user_interface.clear_console()
             else:

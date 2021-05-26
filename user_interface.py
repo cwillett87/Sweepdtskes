@@ -36,18 +36,30 @@ def marketing_firm_menu():
         user_selection = validate_main_menu(user_input)
     return user_selection[1]
 
+
 #prompt would you like to create a sweepstakes?
-#yes = create sweepstakes
-#no = terminate
+def sweepstakes_menu():
+    user_selection = (False, None)
+    while user_selection[0] is False:
+        print('Would you like to create a sweepstakes?')
+        print('Press 1 for yes') #yes = create sweepstakes
+        print('Press 2 for no') #no = terminate
+        user_input = try_parse_int(input())
+        user_selection = validate_main_menu(user_input)
+    return user_selection[1]
+
 
 #if yes what would you like to name the sweepstakes?
-#create sweepstakes with input name
+def name_sweepstakes():
+    print('Please enter a name for the sweepstake!')
+
+
 
 #lets register some contestants
 #input first name, last name , email and assign a registration number
 #would you like to register another contestant?
 #if yes continue to register
-#if no move on to pisk a winner
+#if no move on to pick a winner
 
 #no = time to pick a winner
 #press 1 to randomly pick a winner and notify the contestant
