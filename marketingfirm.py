@@ -1,23 +1,19 @@
+import sweepstakestackmanager
 import user_interface
 from sweepstake import Sweepstake
-import marketingfirmcreator
+from sweepstakestackmanager import Sweepstake_stack_manager
+from sweepstakesqueuemanager import Sweepstakes_queue_manager
 
 
 class Marketing_firm:
 
-    def __init__(self, name):
+    def __init__(self, name, manager):
         self.name = name
-        self.manager = marketingfirmcreator.choose_manager_type()
+        self.manager = manager
 
     # create sweepstakes with input name
     def create_sweepstakes(self):
-        will_proceed = True
-        while will_proceed:
-            user_option = user_interface.sweepstakes_menu()
-            if user_option == 1:
-                sweepstake_name = input(user_interface.name_sweepstakes())
-                Sweepstake(sweepstake_name)
-            elif user_option == 2:
-                user_interface.clear_console()
-            else:
-                will_proceed = False
+        sweepstake_name = input(user_interface.name_sweepstakes())
+        sweepstake = Sweepstake(sweepstake_name)
+        sweepstake.registration()
+        return sweepstake

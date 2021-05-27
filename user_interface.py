@@ -1,16 +1,5 @@
 import os
 
-#would you like to create a marketing firm? yes or no
-def simulation_main_menu():
-    user_selection = (False, None)
-    while user_selection[0] is False:
-        print('Would you like to create a marketing firm?')
-        print('Press 1 for yes') #yes = create marketing firm
-        print('Press 2 for no') #no = terminate
-        user_input = try_parse_int(input())
-        user_selection = validate_main_menu(user_input)
-    return user_selection[1]
-
 
 def validate_main_menu(user_input):
     switcher = {
@@ -21,7 +10,7 @@ def validate_main_menu(user_input):
 
 
 def name_firm():
-    print('Please name the marketing firm:')
+    print("Let's create a marketing firm!  In order to get started, please enter a name for the firm: ")
 
 
 #prompt which manager would you like to use?
@@ -39,26 +28,47 @@ def marketing_firm_menu():
 
 #prompt would you like to create a sweepstakes?
 def sweepstakes_menu():
-    user_selection = (False, None)
-    while user_selection[0] is False:
-        print('Would you like to create a sweepstakes?')
-        print('Press 1 for yes') #yes = create sweepstakes
-        print('Press 2 for no') #no = terminate
-        user_input = try_parse_int(input())
-        user_selection = validate_main_menu(user_input)
-    return user_selection[1]
+    print("Now let's create a sweepstake! What would you like the name to be? ")
 
 
-#if yes what would you like to name the sweepstakes?
+#what would you like to name the sweepstakes?
 def name_sweepstakes():
     print('Please enter a name for the sweepstake!')
 
 
-
 #lets register some contestants
+def registration():
+    print('Please register a contestant! ')
+
+
 #input first name, last name , email and assign a registration number
+def contestant_registration_number():
+    print('Please assign this contestant a unique registration number: ')
+
+
+def contestant_first_name():
+    print('What is the contestants first name? ')
+
+
+def contestant_last_name():
+    print('What is the contestants last name? ')
+
+
+def contestant_email():
+    print('What is the contestants email address? ')
+
+
 #would you like to register another contestant?
-#if yes continue to register
+def register_another_contestant():
+    user_selection = (False, None)
+    while user_selection[0] is False:
+        print('Would you like to register another contestant?')
+        print('Press 1 for yes')  #if yes continue to register
+        print('Press 2 for no')  # no = terminate
+        user_input = try_parse_int(input())
+        user_selection = validate_main_menu(user_input)
+    return user_selection[1]
+
 #if no move on to pick a winner
 
 #no = time to pick a winner
