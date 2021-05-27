@@ -69,17 +69,38 @@ def register_another_contestant():
         user_selection = validate_main_menu(user_input)
     return user_selection[1]
 
+
+#print all contestants
+def show_contestants(contestants):# dependency injection works no matter which contestants are used
+    print('Here all the registered contests in: ')
+    print(' ')
+    for key in contestants.items():
+        li = list(key)
+        print(f'Contestant registration number: {li[0]}, '
+              f'First name: {li[1].first_name}, '
+              f'Last name: {li[1].last_name}, '
+              f'Email: {li[1].email}')
+    print(' ')
+
+
+def last_registration_number_used(contestants): # dependency injection works no matter which contestant is used
+    print('Registration numbers used: ')
+    for key in contestants.items():
+        li = list(key)
+        print(f'{li[0]}')
+
+
 #if no move on to pick a winner
+def prompt_pick_winner():
+    print('Now that your done registering contestants, lets find out who wins!')
+    print(' ')
 
-#no = time to pick a winner
-#press 1 to randomly pick a winner and notify the contestant
-#press 2 to register more contestants
 
-#prompt what would you like to do now?
-#press 1 to create another marketing firm
-#press 2 to choose another manager
-#press 3 to create another sweepstakes
-#press 4 to finish (print goodbye message)
+def show_winner_info(contestant): # dependency injection works no matter which contestant is used
+    print("AND...")
+    print('The winning registration number is:  ', contestant[0])
+    print(contestant[1].first_name + ' ' + contestant[1].last_name)
+    print(f'Email: {contestant[1].email}')
 
 
 def try_parse_int(value):

@@ -19,12 +19,18 @@ class marketingFirmCreator:
                 firm = Marketing_firm(firm_name, stack_manager)  # create firm with name input
                 sweepstake = firm.create_sweepstakes()
                 stack_manager.insert_sweepstakes(sweepstake)
+                user_interface.prompt_pick_winner()
+                stack_manager.get_sweepstakes()
+                sweepstake.pick_winner()
                 return firm
             elif user_option == 2:  # create queue manager
                 queue_manager = Sweepstakes_queue_manager()
                 firm = Marketing_firm(firm_name, queue_manager)  # create firm with name input
                 sweepstake = firm.create_sweepstakes()
                 queue_manager.insert_sweepstakes(sweepstake)
+                user_interface.prompt_pick_winner()
+                queue_manager.get_sweepstakes()
+                sweepstake.pick_winner()
                 return firm
             else:
                 will_proceed = False

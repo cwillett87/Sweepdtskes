@@ -9,4 +9,4 @@ class Sweepstakes_queue_manager:
         self.queue.enqueue(sweepstakes)
 
     def get_sweepstakes(self):
-        return Queue.dequeue()
+        return self.queue.dequeue()

@@ -1,15 +1,12 @@
-import sweepstakestackmanager
 import user_interface
 from sweepstake import Sweepstake
-from sweepstakestackmanager import Sweepstake_stack_manager
-from sweepstakesqueuemanager import Sweepstakes_queue_manager
 
 
 class Marketing_firm:
 
-    def __init__(self, name, manager):
+    def __init__(self, name, manager): # dependency injection
         self.name = name
-        self.manager = manager
+        self.manager = manager # works no matter which manager is used
 
     # create sweepstakes with input name
     def create_sweepstakes(self):
