@@ -1,14 +1,6 @@
 import os
 
 
-def validate_main_menu(user_input):
-    switcher = {
-        1: (True, 1),
-        2: (True, 2)
-    }
-    return switcher.get(user_input, (False, None))
-
-
 def name_firm():
     print("Let's create a marketing firm!  In order to get started, please enter a name for the firm: ")
 
@@ -24,6 +16,14 @@ def marketing_firm_menu():
         user_input = try_parse_int(input())
         user_selection = validate_main_menu(user_input)
     return user_selection[1]
+
+
+def validate_main_menu(user_input):
+    switcher = {
+        1: (True, 1),
+        2: (True, 2)
+    }
+    return switcher.get(user_input, (False, None))
 
 
 #prompt would you like to create a sweepstakes?
