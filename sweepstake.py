@@ -27,13 +27,13 @@ class Sweepstake:
         # dependency injection works no matter what or how many contestants are registered
 
     def registration(self):
-        user_interface.last_registration_number_used(self.contestants)
+        #user_interface.last_registration_number_used(self.contestants)
         self.register_contestant()
         will_proceed = True
         while will_proceed:
             user_option = user_interface.register_another_contestant()
             if user_option == 1:  #if yes continue to register
-                user_interface.last_registration_number_used(self.contestants)
+                #user_interface.last_registration_number_used(self.contestants)
                 self.register_contestant()
             elif user_option == 2:
                 user_interface.show_contestants(self.contestants)

@@ -83,12 +83,14 @@ def show_contestants(contestants):# dependency injection works no matter which c
               f'Email: {li[1].email}')
     print(' ')
 
+# was using this method, changed to randomly assign registration numbers
+# still functional (Uncomment in sweepstake.py user_option 1)
 
-def last_registration_number_used(contestants): # dependency injection works no matter which contestant is used
-    print('Registration numbers used: ')
-    for key in contestants.items():
-        li = list(key)
-        print(f'{li[0]}')
+# def last_registration_number_used(contestants): # dependency injection works no matter which contestant is used
+#     print('Registration numbers used: ')
+#     for key in contestants.items():
+#         li = list(key)
+#         print(f'{li[0]}')
 
 
 #if no move on to pick a winner
