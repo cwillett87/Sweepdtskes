@@ -101,6 +101,20 @@ def show_winner_info(contestant): # dependency injection works no matter which c
     print('The winning registration number is:  ', contestant[0])
     print(contestant[1].first_name + ' ' + contestant[1].last_name)
     print(f'Email: {contestant[1].email}')
+    print(' ')
+
+
+def print_send_update(contestant, message):
+    print(contestant[1].first_name + ' ' + contestant[1].last_name)
+    print(f'You received this message: {message}')
+    print(' ')
+
+
+def print_notify(contestant):
+    print(contestant[1].first_name + ' ' + contestant[1].last_name)
+    print("you've Won the sweepstake!")
+    print("Automatically unregistered: Feel free to register for another sweepstake!")
+    print(' ')
 
 
 def try_parse_int(value):

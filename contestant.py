@@ -1,3 +1,6 @@
+import user_interface
+
+
 class Contestant:
 
     def __init__(self, first, last, email, number):
@@ -6,6 +9,6 @@ class Contestant:
         self.email = email
         self.reg_number = int(number)
 
-    def notify(self):
+    def send_notification(self, contestant):
         #notifys winner calling method from user interface
-        pass
+        user_interface.print_notify(contestant)

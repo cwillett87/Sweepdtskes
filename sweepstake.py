@@ -24,6 +24,7 @@ class Sweepstake:
         email = input(user_interface.contestant_email())
         self.contestants[reg_number] = Contestant(first_name, last_name, email, reg_number)
         # dependency injection works no matter what or how many contestants are registered
+
     def registration(self):
         user_interface.last_registration_number_used(self.contestants)
         self.register_contestant()
@@ -45,8 +46,19 @@ class Sweepstake:
         winner = random.choice(contestants)
         contestant = list(winner)
         self.print_contestant_info(contestant)
+        contestant[1].send_notification(contestant)
+        self.unregister(contestant[0])
+        self.dispatch(f'{contestant[1].first_name} {contestant[1].last_name} won the sweepstake!')
         return winner
 
     def print_contestant_info(self, contestant): # dependency injection works no matter which manager is used
         #def print method in user interface and method here
         user_interface.show_winner_info(contestant)
+
+    def unregister(self, contestant):
+        self.contestants.pop(contestant)
+
+    def dispatch(self, message):
+        for key in self.contestants.items():
+            li = list(key)
+            user_interface.print_send_update(li, message)
