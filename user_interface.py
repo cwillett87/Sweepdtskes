@@ -42,8 +42,9 @@ def registration():
 
 
 #input first name, last name , email and assign a registration number
-def contestant_registration_number():
-    print('Please assign this contestant a unique registration number: ')
+def contestant_registration_number(reg_number):
+    print(f"Contestant's unique registration number: {reg_number}")
+    print(' ')
 
 
 def contestant_first_name():
